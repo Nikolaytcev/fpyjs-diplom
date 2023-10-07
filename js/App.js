@@ -9,10 +9,11 @@ class App {
    * */
   static init() {
     this.searchBlock = new SearchBlock(document.getElementsByClassName('search-block')[0]);
+    document.getElementsByClassName('search-block')[0].getElementsByTagName('input')[0].value = localStorage.getItem('id');
     this.imageViewer = new ImageViewer(document.getElementsByClassName('images-wrapper')[0]);
     this.initModals();
   }
-
+  
   /**
    * Инициализирует всплывающее окна
    * */
